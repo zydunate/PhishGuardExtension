@@ -1,0 +1,47 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PhishGuard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+body { 
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial; 
+  width: 320px; 
+  padding: 12px; 
+  background:#ffffff;     /* white background */
+  color:#0d47a1;          /* deep blue text */
+}
+    h1 { font-size: 16px; margin: 0 0 8px; }
+    .row { display: flex; gap: 6px; }
+    button { 
+  padding: 8px 12px; 
+  border-radius: 8px; 
+  border: none; 
+  cursor: pointer; 
+  background:#0d47a1;     /* blue background */
+  color:white;            /* white text */
+}
+input { 
+  border:1px solid #0d47a1; /* blue border */
+}
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-weight: 600; }
+    .ok { background: #e8f5e9; color: #2e7d32; }
+    .warn { background: #fff3e0; color: #f57c00; }
+    .bad { background: #ffebee; color: #d32f2f; }
+    ul { margin: 8px 0 0 18px; }
+    small { color: #666; }
+  </style>
+</head>
+<body>
+  <h1>PhishGuard – Quick Scan</h1>
+  <div class="row">
+    <input id="url" placeholder="Paste or type a URL…" />
+    <button id="scan">Scan</button>
+  </div>
+  <div id="out" style="margin-top: 10px;"></div>
+  <small>Policy: form-hosting domains are flagged.</small>
+  <script type="module" src="popup.js"></script>
+</body>
+</html>

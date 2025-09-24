@@ -1,0 +1,32 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>PhishGuard Options</title>
+  <style>
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
+  max-width: 720px;
+  margin: 24px auto;
+  padding: 0 16px;
+  background:#ffffff;  /* white background */
+  color:#0d47a1;       /* blue text */
+}    label { display: flex; align-items: center; gap: 8px; margin: 12px 0; }
+    input[type="text"] { width: 100%; padding: 8px; border-radius: 8px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+  <h2>PhishGuard – Options</h2>
+  <label>
+    <input type="checkbox" id="flagForms">
+    Flag form-hosting domains (Google Forms, Microsoft Forms) as risky
+  </label>
+  <label>
+    Remote API endpoint (optional): <input type="text" id="api">
+  </label>
+  <button id="save">Save</button>
+  <div id="status"></div>
+  <script type="module" src="options.js"></script>
+</body>
+</html>
